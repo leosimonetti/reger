@@ -2,14 +2,13 @@ package br.com.reger.domain;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioDAO extends BaseDAO {
-	
+
 	public Usuario getUsuarioPorID(Long id) throws SQLException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -58,6 +57,30 @@ public class UsuarioDAO extends BaseDAO {
 
 		}
 		return usuarios;
+	}
+
+	public List<Usuario> getUsuarios() throws SQLException {
+		List<Usuario> users = new ArrayList<>();
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		try {
+			conn = getConnection();
+			stmt = conn.prepareStatement("SELECT * FROM colaboradores");
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				Usuario user = criaUsuario(rs);
+				users.add(user);
+			}
+			rs.close();
+		} finally {
+			if (stmt != null) {
+				stmt.close();
+			}
+			if (conn != null) {
+				conn.close();
+			}
+		}
+		return users;
 	}
 
 	public Usuario criaUsuario(ResultSet rs) throws SQLException {

@@ -19,7 +19,7 @@ public class OlaUsuario extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String requestURI = request.getRequestURI();
-		Long id = RegexUtil.matchId(requestURI);
+		Long id = RegexUtil.matchId(requestURI,"/usuario");
 
 		if (id != null) {
 			Usuario user = userService.getUsuario(id);

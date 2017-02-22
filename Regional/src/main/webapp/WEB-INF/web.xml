@@ -10,8 +10,28 @@
   	<description></description>
   	<servlet-class>br.com.reger.servlets.OlaUsuario</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UsuarioPrimefaces</servlet-name>
+  	<display-name>UsuarioPrimefaces</display-name>
+  	<description></description>
+  	<servlet-class>br.com.reger.servlets.UsuarioPrimefaces</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UsuarioPF</servlet-name>
+  	<display-name>UsuarioPF</display-name>
+  	<description></description>
+  	<servlet-class>br.com.reger.servlets.UsuarioPF</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>OlaUsuario</servlet-name>
   	<url-pattern>/OlaUsuario</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UsuarioPrimefaces</servlet-name>
+  	<url-pattern>/UsuarioPrimefaces</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UsuarioPF</servlet-name>
+  	<url-pattern>/UsuarioPF</url-pattern>
   </servlet-mapping>
 </web-app>
