@@ -1,19 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xmlns="http://java.sun.com/xml/ns/javaee" 
-    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-      http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
-    id="WebApp_ID" version="2.5">
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-  <display-name>fj21-agenda</display-name>
-
-  <welcome-file-list>
-      <welcome-file>index.xhtml</welcome-file>
-      <welcome-file>index.htm</welcome-file>
-      <welcome-file>index.jsp</welcome-file>
-      <welcome-file>default.html</welcome-file>
-      <welcome-file>default.htm</welcome-file>
-      <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>OlaUsuario</servlet-name>
+  	<display-name>OlaUsuario</display-name>
+  	<description></description>
+  	<servlet-class>br.com.reger.servlets.OlaUsuario</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UsuarioPrimefaces</servlet-name>
+  	<display-name>UsuarioPrimefaces</display-name>
+  	<description></description>
+  	<servlet-class>br.com.reger.servlets.UsuarioPrimefaces</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UsuarioPF</servlet-name>
+  	<display-name>UsuarioPF</display-name>
+  	<description></description>
+  	<servlet-class>br.com.reger.servlets.UsuarioPF</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>OlaUsuario</servlet-name>
+  	<url-pattern>/OlaUsuario</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UsuarioPrimefaces</servlet-name>
+  	<url-pattern>/UsuarioPrimefaces</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UsuarioPF</servlet-name>
+  	<url-pattern>/UsuarioPF</url-pattern>
+  </servlet-mapping>
 </web-app>
