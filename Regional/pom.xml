@@ -8,6 +8,10 @@
 	<name>regional Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<dependencies>
 
 		<!-- JUnit -->
@@ -53,6 +57,7 @@
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>6.0</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- Java Faces -->
@@ -74,6 +79,15 @@
 			<version>2.2.14</version>
 		</dependency>
 
+		<!-- Faces Glassfish -->
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.faces</artifactId>
+			<version>2.2.9</version>
+			<scope>compile</scope>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
@@ -82,6 +96,7 @@
 			<!-- Compiler -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
