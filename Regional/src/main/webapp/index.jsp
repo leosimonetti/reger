@@ -60,7 +60,23 @@
 		</p:menubar>
 </h:form>
 
-
+<p:dataTable var="car" value="#{dtUserView.users}">
+    <p:column headerText="Id">
+        <h:outputText value="#{Usuario.id}" />
+    </p:column>
+ 
+    <p:column headerText="Nome">
+        <h:outputText value="#{Usuario.nomeUsuario}" />
+    </p:column>
+ 
+    <p:column headerText="Senha">
+        <h:outputText value="#{Usuario.senha}" />
+    </p:column>
+ 
+    <p:column headerText="Login Data">
+        <h:outputText value="#{Usuario.ultimoLogin}" />
+    </p:column>
+</p:dataTable>
 
 </body>
 </html>
